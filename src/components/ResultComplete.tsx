@@ -10,7 +10,6 @@ const createResult = (result: number) => {
 };
 
 const ResultComplete: React.FC<{ time: number }> = ({ time }) => {
-
   let finishHour: number = 0;
   let finishMinute: number = 0;
   let finishSecond: number = 0;

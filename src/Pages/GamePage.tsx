@@ -19,11 +19,9 @@ const GamePage: React.FC<{ title: string; game: Game }> = ({ title, game }) => {
     event.preventDefault();
     const input = userInputRef.current!.value;
     if (game.anwers.includes(input) && !yourAnswers.includes(input)) {
-      console.log("yes");
       setJudge("correct");
       setYourAnswers((prevArr) => [...prevArr, input]);
     } else {
-      console.log("no");
       setJudge("wrong");
     }
     userInputRef.current!.value = "";
@@ -47,8 +45,13 @@ const GamePage: React.FC<{ title: string; game: Game }> = ({ title, game }) => {
 
   useEffect(() => {
     if (yourAnswers.length === game.anwers.length) {
-      setIsComplete(true);
-      setShowResult(true);
+      const timeId = setTimeout(() => {
+        setIsComplete(true);
+        setShowResult(true);
+      }, 1000);
+      return () => {
+        clearTimeout(timeId);
+      };
     }
   }, [yourAnswers, game.anwers]);
 

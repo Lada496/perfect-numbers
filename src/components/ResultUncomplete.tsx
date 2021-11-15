@@ -9,7 +9,7 @@ const ResultUncomplete: React.FC<{ result: string[] }> = ({ result }) => {
       <p>
         {score} {`${result.length > 0 ? "points!" : "point"}`}
       </p>
-      <Link to="/games">Back to Home</Link>
+      <Link to="/">Back to Home</Link>
     </div>
   );
 };
