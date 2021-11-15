@@ -1,0 +1,14 @@
+@use "base" as *;
+@mixin btn($fontSize) {
+  background: transparent;
+  display: block;
+  margin: auto;
+  border: none;
+  text-decoration: underline;
+  font-size: $fontSize;
+  font-family: $dotGothic16;
+  color: $white;
+  &:hover {
+    cursor: pointer;
+  }
+}
