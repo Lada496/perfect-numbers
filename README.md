@@ -2,7 +2,7 @@
 
 ## Description
 
-A quiz game regarding perfect numbers by TypeScript
+A quiz game regarding perfect numbers
 
 ## Stack
 
